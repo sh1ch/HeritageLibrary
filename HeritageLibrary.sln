@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary", "HeritageLibrary\HeritageLibrary.csproj", "{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Wpf", "HeritageLibrary.Wpf\HeritageLibrary.Wpf.csproj", "{E68F7783-9719-405F-A1D7-34C27BB8E974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
