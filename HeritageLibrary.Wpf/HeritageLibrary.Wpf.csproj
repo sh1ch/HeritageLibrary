@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <RootNamespace>Heritage.Wpf</RootNamespace>
+    <AssemblyVersion>1.0.0.*</AssemblyVersion>
   </PropertyGroup>
 
 </Project>
