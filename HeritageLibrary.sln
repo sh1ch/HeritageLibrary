@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary", "Heritage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Wpf", "HeritageLibrary.Wpf\HeritageLibrary.Wpf.csproj", "{E68F7783-9719-405F-A1D7-34C27BB8E974}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Wpf.Controls", "HeritageLibrary.Wpf.Controls\HeritageLibrary.Wpf.Controls.csproj", "{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E68F7783-9719-405F-A1D7-34C27BB8E974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
