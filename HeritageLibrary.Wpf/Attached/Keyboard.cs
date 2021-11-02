@@ -61,9 +61,7 @@ namespace Heritage.Wpf.Attached
         {
             if ((bool)e.NewValue)
             {
-                UIElement ui = sender as UIElement;
-
-                if (ui != null)
+                if (sender is UIElement ui)
                 {
                     ui.Dispatcher.BeginInvoke(
                         DispatcherPriority.Input,
@@ -75,9 +73,7 @@ namespace Heritage.Wpf.Attached
 
         private static void SetImeOnChangedCallback(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            UIElement ui = sender as UIElement;
-
-            if (ui != null)
+            if (sender is UIElement ui)
             {
                 bool isEnabled = (bool)e.NewValue;
 
