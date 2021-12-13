@@ -13,58 +13,57 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HeritageLibrary.Wpf.Controls.Drawings
+namespace HeritageLibrary.Wpf.Controls.Drawings;
+
+/// <summary>
+/// Arrow1.xaml の相互作用ロジック
+/// </summary>
+public partial class Arrow1 : UserControl
 {
-    /// <summary>
-    /// Arrow1.xaml の相互作用ロジック
-    /// </summary>
-    public partial class Arrow1 : UserControl
+    public static readonly DependencyProperty ArrowColorProperty =
+        DependencyProperty.Register(
+            nameof(ArrowColor),
+            typeof(Brush),
+            typeof(Arrow1),
+            new UIPropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0x5F, 0x63, 0x68)))
+        );
+
+    public Brush ArrowColor
     {
-        public static readonly DependencyProperty ArrowColorProperty =
-            DependencyProperty.Register(
-                nameof(ArrowColor),
-                typeof(Brush),
-                typeof(Arrow1),
-                new UIPropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0x5F, 0x63, 0x68)))
-            );
+        get => (Brush)GetValue(ArrowColorProperty);
+        set => SetValue(ArrowColorProperty, value);
+    }
 
-        public Brush ArrowColor
-        {
-            get => (Brush)GetValue(ArrowColorProperty);
-            set => SetValue(ArrowColorProperty, value);
-        }
+    public static readonly DependencyProperty EllipseBackgroundProperty =
+        DependencyProperty.Register(
+            nameof(EllipseBackground),
+            typeof(Brush),
+            typeof(Arrow1),
+            new UIPropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0xEE, 0xEE, 0xEE)))
+        );
 
-        public static readonly DependencyProperty EllipseBackgroundProperty =
-            DependencyProperty.Register(
-                nameof(EllipseBackground),
-                typeof(Brush),
-                typeof(Arrow1),
-                new UIPropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0xEE, 0xEE, 0xEE)))
-            );
+    public Brush EllipseBackground
+    {
+        get => (Brush)GetValue(EllipseBackgroundProperty);
+        set => SetValue(EllipseBackgroundProperty, value);
+    }
 
-        public Brush EllipseBackground
-        {
-            get => (Brush)GetValue(EllipseBackgroundProperty);
-            set => SetValue(EllipseBackgroundProperty, value);
-        }
+    public static readonly DependencyProperty IsFlipHorizontalProperty =
+        DependencyProperty.Register(
+            nameof(IsFlipHorizontal),
+            typeof(bool),
+            typeof(Arrow1),
+            new UIPropertyMetadata(false)
+        );
 
-        public static readonly DependencyProperty IsFlipHorizontalProperty =
-            DependencyProperty.Register(
-                nameof(IsFlipHorizontal),
-                typeof(bool),
-                typeof(Arrow1),
-                new UIPropertyMetadata(false)
-            );
+    public bool IsFlipHorizontal
+    {
+        get => (bool)GetValue(IsFlipHorizontalProperty);
+        set => SetValue(IsFlipHorizontalProperty, value);
+    }
 
-        public bool IsFlipHorizontal
-        {
-            get => (bool)GetValue(IsFlipHorizontalProperty);
-            set => SetValue(IsFlipHorizontalProperty, value);
-        }
-
-        public Arrow1()
-        {
-            InitializeComponent();
-        }
+    public Arrow1()
+    {
+        InitializeComponent();
     }
 }
