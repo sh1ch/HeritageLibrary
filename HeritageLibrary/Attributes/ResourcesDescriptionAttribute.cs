@@ -16,8 +16,6 @@ namespace Heritage.Attributes;
 [AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = false)]
 public class ResourcesDescriptionAttribute : DescriptionAttribute
 {
-    private readonly string _Description;
-
     private Type ResourceType { get; set; }
 
     /// <summary>
