@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace HeritageLibrary.Wpf.Controls.ValueConverters;
+namespace Heritage.Wpf.Controls.ValueConverters;
 
 internal class BoolToScaleXConverter : IValueConverter
 {

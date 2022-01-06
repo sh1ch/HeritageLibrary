@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HeritageLibrary.Wpf.Controls.Drawings;
+namespace Heritage.Wpf.Controls.Drawings;
 
 /// <summary>
 /// Arrow1.xaml の相互作用ロジック

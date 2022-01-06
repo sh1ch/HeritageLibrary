@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <RootNamespace>Heritage.Wpf.Control</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary", "HeritageLibrary\HeritageLibrary.csproj", "{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary", "HeritageLibrary\HeritageLibrary.csproj", "{2F6FEBF0-8F76-4147-8B8C-71B2E425F83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Wpf", "HeritageLibrary.Wpf\HeritageLibrary.Wpf.csproj", "{E68F7783-9719-405F-A1D7-34C27BB8E974}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Wpf", "HeritageLibrary.Wpf\HeritageLibrary.Wpf.csproj", "{E68F7783-9719-405F-A1D7-34C27BB8E974}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Wpf.Controls", "HeritageLibrary.Wpf.Controls\HeritageLibrary.Wpf.Controls.csproj", "{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Wpf.Controls", "HeritageLibrary.Wpf.Controls\HeritageLibrary.Wpf.Controls.csproj", "{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Test", "HeritageLibrary.Test\HeritageLibrary.Test.csproj", "{23465FDD-2185-4898-B328-D35E0ED87FDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BCEF32F-F4CF-4869-B97E-E5E1DE606099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23465FDD-2185-4898-B328-D35E0ED87FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23465FDD-2185-4898-B328-D35E0ED87FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23465FDD-2185-4898-B328-D35E0ED87FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23465FDD-2185-4898-B328-D35E0ED87FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
