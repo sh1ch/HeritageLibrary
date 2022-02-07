@@ -7,4 +7,8 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HeritageLibrary\HeritageLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

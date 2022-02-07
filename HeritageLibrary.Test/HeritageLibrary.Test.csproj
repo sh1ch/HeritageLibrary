@@ -20,4 +20,8 @@
     <ProjectReference Include="..\HeritageLibrary\HeritageLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SecurityTests\" />
+  </ItemGroup>
+
 </Project>
