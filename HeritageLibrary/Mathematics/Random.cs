@@ -35,6 +35,21 @@ public static class Random
     }
 
     /// <summary>
+    /// 指定回数だけ擬似乱数の計算を実行します。
+    /// <para>
+    /// 乱数の推測を回避したり、初期化の目的に利用します。
+    /// </para>
+    /// </summary>
+    /// <param name="count">実行回数。</param>
+    public static void Stretch(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            _ = _State.GetNext();
+        }
+    }
+
+    /// <summary>
     /// 指定した範囲のランダムな数値を取得します。（指定した値を含む）
     /// </summary>
     /// <param name="minValue">最小値。</param>

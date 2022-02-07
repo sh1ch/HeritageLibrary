@@ -33,7 +33,7 @@ public class RandomState
     /// <param name="seed">擬似乱数系列の開始値を計算するために使用するシード値。</param>
     public RandomState(int seed)
     {
-
+        SetSeed((ulong)seed);
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class RandomState
     /// <param name="seed">擬似乱数系列の開始値を計算するために使用するシード値。</param>
     public RandomState(uint seed)
     {
-
+        SetSeed((ulong)seed);
     }
 
     /// <summary>
@@ -51,7 +51,7 @@ public class RandomState
     /// <param name="seed">擬似乱数系列の開始値を計算するために使用するシード値。</param>
     public RandomState(long seed)
     {
-
+        SetSeed((ulong)seed);
     }
 
     /// <summary>
@@ -60,7 +60,7 @@ public class RandomState
     /// <param name="seed">擬似乱数系列の開始値を計算するために使用するシード値。</param>
     public RandomState(ulong seed)
     {
-
+        SetSeed((ulong)seed);
     }
 
     /// <summary>
@@ -82,6 +82,21 @@ public class RandomState
         _y = _x * 3266489917U + 1;
         _z = _y * 3266489917U + 1;
         _w = _z * 3266489917U + 1;
+    }
+
+    /// <summary>
+    /// 指定回数だけ擬似乱数の計算を実行します。
+    /// <para>
+    /// 乱数の推測を回避したり、初期化の目的に利用します。
+    /// </para>
+    /// </summary>
+    /// <param name="count">実行回数。</param>
+    public void Stretch(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            _ = GetNext();
+        }
     }
 
     /// <summary>
