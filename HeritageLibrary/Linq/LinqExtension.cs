@@ -50,4 +50,5 @@ public static class LinqExtension
     public static decimal? MinOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, decimal?> selector) => source?.Count() > 0 ? source.Min(selector) : default(decimal?);
     public static float MinOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, float> selector) => source?.Count() > 0 ? source.Min(selector) : default(float);
     public static float? MinOrDefault<TSource>(this IEnumerable<TSource> source, Func<TSource, float?> selector) => source?.Count() > 0 ? source.Min(selector) : default(float?);
+
 }
