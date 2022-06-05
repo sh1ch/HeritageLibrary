@@ -1,4 +1,4 @@
-using Heritage.Linq;
+ï»¿using Heritage.Linq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -129,35 +129,35 @@ public partial class LinqTests
     }
 
     [TestCase(new int[] { 1, 2, 3, 9, 8, 2 })]
-    public void int_Å‘å’l_Å¬’l(int[] args)
+    public void int_æœ€å¤§å€¤_æœ€å°å€¤(int[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9);
         Assert.AreEqual(args.MinOrDefault(), 1);
     }
 
     [TestCase(new long[] { 1, 2, 3, 9, 8, 2 })]
-    public void long_Å‘å’l_Å¬’l(long[] args)
+    public void long_æœ€å¤§å€¤_æœ€å°å€¤(long[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9);
         Assert.AreEqual(args.MinOrDefault(), 1);
     }
 
     [TestCase(new double[] { 1.1, 2.2, 3.3, 9.8, 8.2, 2.5 })]
-    public void double_Å‘å’l_Å¬’l(double[] args)
+    public void double_æœ€å¤§å€¤_æœ€å°å€¤(double[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.8);
         Assert.AreEqual(args.MinOrDefault(), 1.1);
     }
 
     [TestCase(new float[] { 1.1F, 2.2F, 3.3F, 9.8F, 8.2F, 2.5F })]
-    public void float_Å‘å’l_Å¬’l(float[] args)
+    public void float_æœ€å¤§å€¤_æœ€å°å€¤(float[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.8F);
         Assert.AreEqual(args.MinOrDefault(), 1.1F);
     }
 
     [TestCaseSource(typeof(DataFactory), "Decimal")]
-    public void decimal_Å‘å’l_Å¬’l(decimal[] args)
+    public void decimal_æœ€å¤§å€¤_æœ€å°å€¤(decimal[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.9D);
         Assert.AreEqual(args.MinOrDefault(), -9.9D);
@@ -165,35 +165,35 @@ public partial class LinqTests
 
 
     [TestCaseSource(typeof(DataFactory), "NullableInt")]
-    public void nullable_int_Å‘å’l_Å¬’l(int?[] args)
+    public void nullable_int_æœ€å¤§å€¤_æœ€å°å€¤(int?[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9);
         Assert.AreEqual(args.MinOrDefault(), -9);
     }
 
     [TestCaseSource(typeof(DataFactory), "NullableLong")]
-    public void nullable_long_Å‘å’l_Å¬’l(long?[] args)
+    public void nullable_long_æœ€å¤§å€¤_æœ€å°å€¤(long?[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9);
         Assert.AreEqual(args.MinOrDefault(), -9);
     }
 
     [TestCaseSource(typeof(DataFactory), "NullableDouble")]
-    public void nullable_double_Å‘å’l_Å¬’l(double?[] args)
+    public void nullable_double_æœ€å¤§å€¤_æœ€å°å€¤(double?[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.9);
         Assert.AreEqual(args.MinOrDefault(), -9.9);
     }
 
     [TestCaseSource(typeof(DataFactory), "NullableFloat")]
-    public void nullable_float_Å‘å’l_Å¬’l(float?[] args)
+    public void nullable_float_æœ€å¤§å€¤_æœ€å°å€¤(float?[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.9F);
         Assert.AreEqual(args.MinOrDefault(), -9.9F);
     }
 
     [TestCaseSource(typeof(DataFactory), "NullableDecimal")]
-    public void nullable_decimal_Å‘å’l_Å¬’l(decimal?[] args)
+    public void nullable_decimal_æœ€å¤§å€¤_æœ€å°å€¤(decimal?[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(), 9.9D);
         Assert.AreEqual(args.MinOrDefault(), -9.9D);

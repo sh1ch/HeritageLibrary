@@ -1,4 +1,4 @@
-using Heritage.Linq;
+ï»¿using Heritage.Linq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -107,7 +107,7 @@ public partial class DataFactory
 public partial class LinqTests
 {
     [TestCaseSource(typeof(DataFactory), "TSourceInt")]
-    public void int_Å‘å’l_Å¬’l(TestData<int>[] args)
+    public void int_æœ€å¤§å€¤_æœ€å°å€¤(TestData<int>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), 8);
@@ -117,7 +117,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceNullableInt")]
-    public void nullable_int_Å‘å’l_Å¬’l(TestData<int?>[] args)
+    public void nullable_int_æœ€å¤§å€¤_æœ€å°å€¤(TestData<int?>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), null);
@@ -127,7 +127,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceDouble")]
-    public void double_Å‘å’l_Å¬’l(TestData<double>[] args)
+    public void double_æœ€å¤§å€¤_æœ€å°å€¤(TestData<double>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), 8.8);
@@ -137,7 +137,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceNullableDouble")]
-    public void nullable_double_Å‘å’l_Å¬’l(TestData<double?>[] args)
+    public void nullable_double_æœ€å¤§å€¤_æœ€å°å€¤(TestData<double?>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), null);
@@ -147,7 +147,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceFloat")]
-    public void float_Å‘å’l_Å¬’l(TestData<float>[] args)
+    public void float_æœ€å¤§å€¤_æœ€å°å€¤(TestData<float>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9F);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), 8.8F);
@@ -157,7 +157,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceNullableFloat")]
-    public void nullable_float_Å‘å’l_Å¬’l(TestData<float?>[] args)
+    public void nullable_float_æœ€å¤§å€¤_æœ€å°å€¤(TestData<float?>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9F);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), null);
@@ -167,7 +167,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceDecimal")]
-    public void decimal_Å‘å’l_Å¬’l(TestData<decimal>[] args)
+    public void decimal_æœ€å¤§å€¤_æœ€å°å€¤(TestData<decimal>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9F);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), 8.8F);
@@ -177,7 +177,7 @@ public partial class LinqTests
     }
 
     [TestCaseSource(typeof(DataFactory), "TSourceNullableDecimal")]
-    public void nullable_decimal_Å‘å’l_Å¬’l(TestData<decimal?>[] args)
+    public void nullable_decimal_æœ€å¤§å€¤_æœ€å°å€¤(TestData<decimal?>[] args)
     {
         Assert.AreEqual(args.MaxOrDefault(p => p.Data1), 9.9F);
         Assert.AreEqual(args.MaxOrDefault(p => p.Data2), null);
