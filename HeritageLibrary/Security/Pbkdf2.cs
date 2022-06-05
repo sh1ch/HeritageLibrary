@@ -52,7 +52,7 @@ public class Pbkdf2
     /// <param name="iterations">演算の反復処理回数。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public byte[] Generate(string password, string salt, int iterations) =>
-        Generate(password, salt, KEY_SIZE, iterations);
+        Generate(password, salt, iterations, KEY_SIZE);
 
     /// <summary>
     /// 疑似ランダム キー（ハッシュ値）を生成します。
@@ -61,7 +61,7 @@ public class Pbkdf2
     /// <param name="salt">キーを派生させるための SALT 値。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public byte[] Generate(string password, string salt) =>
-        Generate(password, salt, KEY_SIZE, INDICATION_ITERATIONS);
+        Generate(password, salt, INDICATION_ITERATIONS, KEY_SIZE);
 
     /// <summary>
     /// Base64 でエンコードされた疑似ランダム キー（ハッシュ値）を生成します。
@@ -72,7 +72,7 @@ public class Pbkdf2
     /// <param name="keySize">キーの大きさ。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public string GenerateBase64(string password, string salt, int iterations, int keySize) =>
-        Convert.ToBase64String(Generate(password, salt, keySize, iterations));
+        Convert.ToBase64String(Generate(password, salt, iterations, keySize));
 
     /// <summary>
     /// Base64 でエンコードされた疑似ランダム キー（ハッシュ値）を生成します。
@@ -82,7 +82,7 @@ public class Pbkdf2
     /// <param name="iterations">演算の反復処理回数。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public string GenerateBase64(string password, string salt, int iterations) =>
-        Convert.ToBase64String(Generate(password, salt, KEY_SIZE, iterations));
+        Convert.ToBase64String(Generate(password, salt, iterations, KEY_SIZE));
 
     /// <summary>
     /// Base64 でエンコードされた疑似ランダム キー（ハッシュ値）を生成します。
@@ -91,5 +91,5 @@ public class Pbkdf2
     /// <param name="salt">キーを派生させるための SALT 値。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public string GenerateBase64(string password, string salt) =>
-        Convert.ToBase64String(Generate(password, salt, KEY_SIZE, INDICATION_ITERATIONS));
+        Convert.ToBase64String(Generate(password, salt, INDICATION_ITERATIONS, KEY_SIZE));
 }
