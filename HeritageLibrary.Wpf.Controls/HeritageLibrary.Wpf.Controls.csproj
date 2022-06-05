@@ -6,4 +6,8 @@
     <RootNamespace>Heritage.Wpf.Control</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HeritageLibrary.Wpf\HeritageLibrary.Wpf.csproj" />
+  </ItemGroup>
+
 </Project>
