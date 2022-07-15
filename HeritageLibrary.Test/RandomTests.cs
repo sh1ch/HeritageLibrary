@@ -12,7 +12,6 @@ public class RandomTests
     [SetUp]
     public void Setup()
     {
-
     }
 
     [TestCase(1, 151, 1000)]

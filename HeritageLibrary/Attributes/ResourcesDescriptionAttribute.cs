@@ -16,7 +16,8 @@ namespace Heritage.Attributes;
 [AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = false)]
 public class ResourcesDescriptionAttribute : DescriptionAttribute
 {
-    private Type ResourceType { get; set; }
+    private readonly string _Description;
+    private Type _ResourceType { get; set; }
 
     /// <summary>
     /// <see cref="Resources"/> クラスのテキストデータを取得します。
@@ -25,14 +26,14 @@ public class ResourcesDescriptionAttribute : DescriptionAttribute
     {
         get
         {
-            var resourceManager = ResourceType.InvokeMember(
+            var resourceManager = _ResourceType.InvokeMember(
                 @"ResourceManager",
                 BindingFlags.GetProperty | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic,
                 null,
                 null,
                 new object[] { }) as ResourceManager;
 
-            var cultureInfo = ResourceType.InvokeMember(
+            var cultureInfo = _ResourceType.InvokeMember(
                 @"Culture",
                 BindingFlags.GetProperty | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic,
                 null,
@@ -43,6 +44,17 @@ public class ResourcesDescriptionAttribute : DescriptionAttribute
 
             return DescriptionValue;
         }
+    }
+
+    /// <summary>
+    /// <see cref="ResourcesDescriptionAttribute"/> クラスの新しいインスタンスを初期化します。
+    /// </summary>
+    /// <param name="description">リソースデータの名前。</param>
+    /// <param name="resourcesType">リソースの型。</param>
+    public ResourcesDescriptionAttribute(string description, Type resourcesType) : base(description)
+    {
+        _Description = description;
+        _ResourceType = resourcesType;
     }
 }
 

@@ -11,7 +11,6 @@ public class RetryTests
     [SetUp]
     public void Setup()
     {
-
     }
 
     [Test]

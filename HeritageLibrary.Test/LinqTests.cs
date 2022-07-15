@@ -55,7 +55,6 @@ public partial class LinqTests
     [SetUp]
     public void Setup()
     {
-
     }
 
     [TestCase(new int[] { })]
