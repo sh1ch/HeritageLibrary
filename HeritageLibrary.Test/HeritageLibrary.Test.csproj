@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HeritageLibrary.ExpressionParser\HeritageLibrary.ExpressionParser.csproj" />
     <ProjectReference Include="..\HeritageLibrary\HeritageLibrary.csproj" />
   </ItemGroup>
 
