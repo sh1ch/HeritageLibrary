@@ -32,26 +32,29 @@ public class TextToNode
         // スペースを削除
         var c = text.Replace(" ", "");
 
-        for (int i = 0; i < c.Length; i++)
+        if (target is not null)
         {
-            switch (c[i])
+            for (int i = 0; i < c.Length; i++)
             {
-                case '(':
-                    target.Formula += target.Parenthesis;
+                switch (c[i])
+                {
+                    case '(':
+                        target!.Formula += target.Parenthesis;
 
-                    // 子ノードを追加
-                    var newNode = new Node(parenthesis);
-                    newNode.Parent = target;
-                    target.Childs.Add(newNode);
-                    target = newNode;
-                    break;
-                case ')':
-                    // 現在のノードを親に戻す
-                    target = target.Parent;
-                    break;
-                default:
-                    target.Formula += c[i];
-                    break;
+                        // 子ノードを追加
+                        var newNode = new Node(parenthesis);
+                        newNode.Parent = target;
+                        target.Childs.Add(newNode);
+                        target = newNode;
+                        break;
+                    case ')':
+                        // 現在のノードを親に戻す
+                        target = target!.Parent;
+                        break;
+                    default:
+                        target!.Formula += c[i];
+                        break;
+                }
             }
         }
 

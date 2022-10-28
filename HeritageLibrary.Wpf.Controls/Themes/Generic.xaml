@@ -4,8 +4,11 @@
     xmlns:heri_ctrl="clr-namespace:Heritage.Wpf.Control">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/DataGridCustomTextBoxColumnTheme.xaml" />
+        <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/ToggleControlTheme.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type heri_ctrl:DataGridCustomTextBoxColumn}" BasedOn="{StaticResource DataGridCustomTextBoxColumnDefaultStyle}" />
+
+    <Style TargetType="{x:Type heri_ctrl:ToggleControl}" BasedOn="{StaticResource ToggleControlDefaultStyle}" />
 
 </ResourceDictionary>
