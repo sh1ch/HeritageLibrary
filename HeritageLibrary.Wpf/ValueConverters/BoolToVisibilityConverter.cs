@@ -22,6 +22,26 @@ public class BoolToVisibilityConverter : DependencyObject, IValueConverter
 {
     #region DependencyProperties
 
+    /// <summary>
+    /// <see cref="bool"/> 値を逆にして評価するかどうかを決める値を設定します。
+    /// </summary>
+    public static readonly DependencyProperty IsInverseProperty =
+        DependencyProperty.Register(
+            nameof(IsInverse),
+            typeof(bool),
+            typeof(BoolToVisibilityConverter),
+            new PropertyMetadata(false)
+        );
+
+    /// <summary>
+    /// <c>true</c> のときに返却する <see cref="Visibility"/> 型の値を取得または設定します。
+    /// </summary>
+    public bool IsInverse
+    {
+        get => (bool)GetValue(IsInverseProperty);
+        set => SetValue(IsInverseProperty, value);
+    }
+
     public static readonly DependencyProperty TrueValueProperty =
         DependencyProperty.Register(
             nameof(TrueValue),
@@ -86,6 +106,11 @@ public class BoolToVisibilityConverter : DependencyObject, IValueConverter
 
         if (canParse)
         {
+            if (IsInverse)
+            {
+                result = !result;
+            }
+
             return result ? TrueValue : FalseValue;
         }
         
@@ -103,8 +128,13 @@ public class BoolToVisibilityConverter : DependencyObject, IValueConverter
 
         if (canParse)
         {
-            if (result == TrueValue) return true;
-            if (result == FalseValue) return false;
+            bool data = false;
+
+            if (result == TrueValue) data = true;
+            if (result == FalseValue) data = false;
+            if (IsInverse) data = !data;
+
+            return data;
         }
 
         return null;

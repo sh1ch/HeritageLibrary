@@ -32,4 +32,27 @@ public static class Extension
     {
         return source?.Cast<T>().ToArray() ?? Array.Empty<T>();
     }
+
+    /// <summary>
+    /// オブジェクトは、 引数のいずれかの値と等しいかどうかを判断します。
+    /// </summary>
+    /// <typeparam name="T">確認をするオブジェクトの型。</typeparam>
+    /// <param name="own">値を確認するオブジェクト。</param>
+    /// <param name="items">含んでいるかどうかを確認する値。</param>
+    /// <returns>等しい値を含んでいたとき true 。それ以外のとき false 。</returns>
+    public static bool IsAny<T>(this T own, params T[] items) where T : IComparable
+    {
+        bool isEquals = false;
+
+        foreach (var item in items)
+        {
+            if (own.Equals(item))
+            {
+                isEquals = true;
+                break;
+            }
+        }
+
+        return isEquals;
+    }
 }
