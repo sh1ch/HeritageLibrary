@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:hf_conv="clr-namespace:Heritage.Wpf.ValueConverters;assembly=HeritageLibrary.Wpf"
+                    xmlns:hf_ctrl="clr-namespace:Heritage.Wpf.Control">
+
+    <hf_conv:ResourcesDescriptionConverter x:Key="ResourcesDescriptionConverter" />
+
+    <Style x:Key="ComboBoxResourcesDescriptionStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="Black" />
+
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ContentPresenter Content="{Binding ., Mode=OneWay, Converter={StaticResource ResourcesDescriptionConverter}}" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="ItemContainerStyle">
+            <Setter.Value>
+                <Style TargetType="{x:Type ComboBoxItem}">
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                    <Setter Property="Foreground" Value="Black" />
+
+                    <Setter Property="FontWeight" Value="Normal" />
+                    <Setter Property="FontSize" Value="13" />
+                    <Setter Property="Padding" Value="2 4" />
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
