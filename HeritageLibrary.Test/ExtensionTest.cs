@@ -74,4 +74,22 @@ public class ExtensionTest
 
         Assert.AreEqual(result, answer);
     }
+
+    [TestCase("abcd",  3, new string[] { "a", "b", "c" }, new string[] { "d", "d", "d" }, "dddd")]
+    [TestCase("aaad",  1, new string[] { "a" }, new string[] { "d" }, "dddd")]
+    [TestCase("dddd",  1, new string[] { "a" }, new string[] { "d" }, "dddd")]
+    [TestCase("dddd\r\n",  2, new string[] { "\r", "\n" }, new string[] { @"\r", @"\n" }, @"dddd\r\n")]
+    public void Test_Replaces(string source, int count, string[] oldValues, string[] newValues, string answer)
+    {
+        var tuples = new List<(string, string)>();
+
+        for (int i = 0; i < count; i++)
+        {
+            tuples.Add((oldValues[i], newValues[i]));
+        }
+
+        var textValue = source.Replaces(tuples.ToArray());
+
+        Assert.AreEqual(textValue, answer);
+    }
 }

@@ -149,6 +149,24 @@ public static class Extension
     }
 
     /// <summary>
+    /// 指定したテキストに出現する <see cref="string"/> をすべて、別の指定した <see cref="string"/> に置換した新しいテキストを取得します。
+    /// </summary>
+    /// <param name="source">置換するテキスト。</param>
+    /// <param name="pairs">出現テキストと置換テキストの <see cref="Tuple{T1, T2}"/>。</param>
+    /// <returns>置換したテキスト。出現テキストが存在しないとき、変更しないテキストを返却。</returns>
+    public static string Replaces(this string source, params (string, string)[] pairs)
+    {
+        var newText = source;
+
+        foreach (var pair in pairs)
+        {
+            newText = newText.Replace(pair.Item1, pair.Item2);
+        }
+
+        return newText;
+    }
+
+    /// <summary>
     /// バイト配列のデータを 16 進数のテキストに変換します。
     /// </summary>
     /// <param name="bytes">バイト配列のデータ。</param>
