@@ -48,7 +48,7 @@ public class BoolToEnumConverter :  IValueConverter
     {
         var parameterText = parameter?.ToString() ?? "";
 
-        if (parameterText == null)
+        if (parameterText == "")
         {
             return DependencyProperty.UnsetValue;
         }
