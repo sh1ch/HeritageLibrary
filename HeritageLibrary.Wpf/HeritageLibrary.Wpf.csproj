@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HeritageLibrary.Windows.Dialogs\HeritageLibrary.Windows.Dialogs.csproj" />
     <ProjectReference Include="..\HeritageLibrary\HeritageLibrary.csproj" />
   </ItemGroup>
 
