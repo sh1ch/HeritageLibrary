@@ -1,4 +1,5 @@
-﻿using Heritage.Linq;
+﻿using Heritage.Extensions;
+using Heritage.Linq;
 using Heritage.Systems;
 using NUnit.Framework;
 using System;
@@ -91,5 +92,32 @@ public class ExtensionTest
         var textValue = source.Replaces(tuples.ToArray());
 
         Assert.AreEqual(textValue, answer);
+    }
+
+    [TestCase(true, "ON")]
+    [TestCase(false, "OFF")]
+    public void Test_ValueExtension_ToTextONorOFF(bool source, string answer)
+    {
+        var result = source.ToTextONorOFF();
+
+        Assert.AreEqual(result, answer);
+    }
+
+    [TestCase(0.125D, 2, 0.13D)]
+    [TestCase(0.123456D, 3, 0.123D)]
+    public void Test_ValueExtension_ToToRound(double source, int digits, double answer)
+    {
+        var result = source.ToRound(digits);
+
+        Assert.AreEqual(result, answer);
+    }
+
+    [TestCase(0.125D, 2, "0.13")]
+    [TestCase(0.123456D, 3, "0.123")]
+    public void Test_ValueExtension_ToToRoundTextF(double source, int digits, string answer)
+    {
+        var result = source.ToRoundTextF(digits);
+
+        Assert.AreEqual(result, answer);
     }
 }
