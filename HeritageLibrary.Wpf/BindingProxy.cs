@@ -16,7 +16,8 @@ public class BindingProxy : Freezable
         DependencyProperty.Register(
             nameof(Proxy),
             typeof(object),
-            typeof(BindingProxy)
+            typeof(BindingProxy),
+            new PropertyMetadata(null)
         );
 
     public object Proxy
