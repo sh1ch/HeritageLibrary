@@ -44,20 +44,34 @@ public class ContentRendered
                         window.ContentRendered += (sender, args) =>
                         {
                             var command = GetCommand(control);
+                            var parameter = GetCommandParameter(control);
 
-                            command?.Execute(e);
+                            if (parameter == null)
+                            {
+                                command?.Execute(e);
+                            }
+                            else
+                            {
+                                command?.Execute(parameter);
+                            }
                         };
                     }
                 })
             );
 
-    public static ICommand GetCommand(DependencyObject d) 
-    {
-        return (ICommand)d.GetValue(CommandProperty); 
-    }
+    private static readonly DependencyProperty CommandParameterProperty =
+        DependencyProperty.RegisterAttached(
+            "CommandParameter",
+            typeof(object),
+            typeof(ContentRendered),
+            new FrameworkPropertyMetadata(
+                null,
+                FrameworkPropertyMetadataOptions.None)
+            );
 
-    public static void SetCommand(DependencyObject d, ICommand value)
-    {
-        d.SetValue(CommandProperty, value);
-    }
+    public static ICommand GetCommand(DependencyObject d) => (ICommand)d.GetValue(CommandProperty);
+    public static void SetCommand(DependencyObject d, ICommand value) => d.SetValue(CommandProperty, value);
+
+    public static object GetCommandParameter(DependencyObject d) => d.GetValue(CommandParameterProperty);
+    public static void SetCommandParameter(DependencyObject d, object value) => d.SetValue(CommandParameterProperty, value);
 }
