@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.ExpressionP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Notification", "HeritageLibrary.Notification\HeritageLibrary.Notification.csproj", "{565112A7-E139-49E5-ADBA-5603386F2AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Windows.Dialogs", "HeritageLibrary.Windows.Dialogs\HeritageLibrary.Windows.Dialogs.csproj", "{0C2A98DB-6F21-4BEC-BAC3-0A6702FFD1E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Windows.Dialogs", "HeritageLibrary.Windows.Dialogs\HeritageLibrary.Windows.Dialogs.csproj", "{0C2A98DB-6F21-4BEC-BAC3-0A6702FFD1E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Windows.Print", "HeritageLibrary.Windows.Print\HeritageLibrary.Windows.Print.csproj", "{D7D681E2-627A-4188-B2C3-812C1B3CD1BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{0C2A98DB-6F21-4BEC-BAC3-0A6702FFD1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C2A98DB-6F21-4BEC-BAC3-0A6702FFD1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C2A98DB-6F21-4BEC-BAC3-0A6702FFD1E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D681E2-627A-4188-B2C3-812C1B3CD1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D681E2-627A-4188-B2C3-812C1B3CD1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D681E2-627A-4188-B2C3-812C1B3CD1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D681E2-627A-4188-B2C3-812C1B3CD1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
