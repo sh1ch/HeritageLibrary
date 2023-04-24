@@ -164,6 +164,10 @@ public class Printer
 
     #endregion
 
+    /// <summary>
+    /// Windows OS のデフォルトのプリンターの名前を取得します。
+    /// </summary>
+    /// <returns>デフォルトのプリンターの名前。取得に失敗したときは <c>""</c> を返却します。</returns>
     [SupportedOSPlatform("windows")]
     public static string GetDefaultPrinterName()
     {
