@@ -14,8 +14,8 @@ public class RandomProvider
 {
     private static int _Seed = Environment.TickCount;
 
-    private static ThreadLocal<RandomState> _RandomWrapper = 
-        new ThreadLocal<RandomState>(() =>  new RandomState(Interlocked.Increment(ref _Seed)));
+    private static ThreadLocal<RandomState> _RandomWrapper =
+        new ThreadLocal<RandomState>(() => new RandomState(Interlocked.Increment(ref _Seed)));
 
     /// <summary>
     /// 疑似乱数ジェネレーターの状態を決めるシード値を設定します。
@@ -96,5 +96,5 @@ public class RandomProvider
         return state.GetNext();
     }
 
-    private static RandomState GetThreadRandom() => _RandomWrapper.Value;
+    private static RandomState GetThreadRandom() => _RandomWrapper.Value!;
 }
