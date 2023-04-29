@@ -40,7 +40,7 @@ public class ResourcesDescriptionAttribute : DescriptionAttribute
                 null,
                 new object[] { }) as CultureInfo;
 
-            DescriptionValue = resourceManager?.GetString(DescriptionValue, cultureInfo) ?? "";
+            DescriptionValue = resourceManager?.GetString(DescriptionValue, cultureInfo);
 
             return DescriptionValue;
         }
@@ -68,7 +68,7 @@ public static class ResourcesDescriptionExtension
     public static string GetAttributeValue(this object value)
     {
         var attributeValue = "";
-        var fieldInfo = value.GetType().GetField(value?.ToString() ?? "") as FieldInfo;
+        var fieldInfo = value.GetType().GetField(value.ToString()) as FieldInfo;
 
         if (fieldInfo != null)
         {

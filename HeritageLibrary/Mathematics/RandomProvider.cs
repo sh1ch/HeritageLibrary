@@ -96,5 +96,5 @@ public class RandomProvider
         return state.GetNext();
     }
 
-    private static RandomState GetThreadRandom() => _RandomWrapper.Value!;
+    private static RandomState GetThreadRandom() => _RandomWrapper.Value;
 }
