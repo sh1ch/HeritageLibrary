@@ -16,7 +16,7 @@ namespace Heritage.Wpf.ValueConverters;
 /// コンバーターパラメーターのテキスト値を <seealso cref="Enum"/> 型のデータに変換します。
 /// </para>
 /// </summary>
-[ValueConversion(typeof(DateTime), typeof(string))]
+[ValueConversion(typeof(object), typeof(string))]
 public class ConverterParameterToEnumConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

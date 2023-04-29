@@ -44,8 +44,8 @@ public class GaussMatrix
     /// <param name="dimension">行列の次元数。</param>
     public GaussMatrix(int dimension)
     {
-        A = new double[dimension, dimension];
-        B = new double[dimension];
+        _A = new double[dimension, dimension];
+        _B = new double[dimension];
 
         Dimension = dimension;
     }
