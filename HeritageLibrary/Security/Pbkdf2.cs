@@ -1,36 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Heritage.Security;
+
 /// <summary>
 /// <see cref="Pbkdf2"/> クラスは、 Password-Based Key Drivation Function 2 (パスワードベース鍵導出関数 2)  ハッシュを生成します。
 /// </summary>
+[DebuggerDisplay("size={KEY_SIZE}, iteration={INDICATION_ITERATIONS}, hash={_AlgorithmName}")]
 public class Pbkdf2
 {
-    readonly int KEY_SIZE = 32;  // (JUNE 2016)
-    readonly int INDICATION_ITERATIONS = 20000; // 目安になる反復処理回数 (JUNE 2016)
+    readonly int KEY_SIZE = 64; // (Nov 2023)
+    readonly int INDICATION_ITERATIONS = 600000; // 目安になる反復処理回数 (OWASP SHA256)
+    readonly HashAlgorithmName _HASH_NAME = HashAlgorithmName.SHA256;
 
-    /// <summary>
-    /// <see cref="Pbkdf2"/> クラスの新しいインスタンスを初期化します。
-    /// </summary>
-    public Pbkdf2()
-    {
+	/// <summary>
+	/// <see cref="Pbkdf2"/> クラスの新しいインスタンスを初期化します。
+	/// </summary>
+	public Pbkdf2()
+	{
+	}
 
-    }
-
-    /// <summary>
-    /// <see cref="Pbkdf2"/> クラスの新しいインスタンスを初期化します。
-    /// </summary>
-    /// <param name="size">キーの大きさ。</param>
-    /// <param name="iterations">イテレーションの回数。</param>
-    public Pbkdf2(int size, int iterations)
+	/// <summary>
+	/// <see cref="Pbkdf2"/> クラスの新しいインスタンスを初期化します。
+	/// </summary>
+	/// <param name="size">キーの大きさ。</param>
+	/// <param name="iterations">イテレーションの回数。</param>
+	/// <param name="name">ハッシュアルゴリズムの名前。</param>
+	public Pbkdf2(int size, int iterations, HashAlgorithmName name)
     {
         KEY_SIZE = size;
         INDICATION_ITERATIONS = iterations;
+		_HASH_NAME = name;
     }
 
     /// <summary>
@@ -42,7 +47,7 @@ public class Pbkdf2
     /// <param name="keySize">キーの大きさ。</param>
     /// <returns>疑似ランダム キー（ハッシュ値）。</returns>
     public byte[] Generate(string password, string salt, int iterations, int keySize) =>
-        new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt), iterations).GetBytes(keySize);
+        new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt), iterations, _HASH_NAME).GetBytes(keySize);
 
     /// <summary>
     /// 疑似ランダム キー（ハッシュ値）を生成します。
