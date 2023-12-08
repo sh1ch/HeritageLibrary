@@ -5,10 +5,13 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/DataGridCustomTextBoxColumnTheme.xaml" />
         <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/ToggleControlTheme.xaml" />
+        <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/EarlessTabTheme.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type heri_ctrl:DataGridCustomTextBoxColumn}" BasedOn="{StaticResource DataGridCustomTextBoxColumnDefaultStyle}" />
 
     <Style TargetType="{x:Type heri_ctrl:ToggleControl}" BasedOn="{StaticResource ToggleControlDefaultStyle}" />
+
+    <Style TargetType="{x:Type heri_ctrl:EarlessTab}" BasedOn="{StaticResource EarlessTabDefaultStyle}" />
 
 </ResourceDictionary>
