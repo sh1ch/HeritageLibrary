@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 
 
@@ -16,9 +17,23 @@ namespace Heritage.Wpf.ValueConverters;
 /// </para>
 /// </summary>
 [ValueConversion(typeof(DateTime), typeof(string))]
-public class DateTimeFormatConverter : IValueConverter
+public class DateTimeFormatConverter : DependencyObject, IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public static readonly DependencyProperty TextFormatProperty =
+		DependencyProperty.Register(
+			nameof(TextFormat),
+			typeof(string),
+			typeof(DateTimeFormatConverter),
+			new PropertyMetadata("")
+		);
+
+	public string TextFormat
+	{
+		get => (string)GetValue(TextFormatProperty);
+		set => SetValue(TextFormatProperty, value);
+	}
+
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         DateTime selectedDateTime;
         string displayValue = "";
@@ -31,7 +46,12 @@ public class DateTimeFormatConverter : IValueConverter
         string formatParameter = parameter?.ToString() ?? "";
         string formatSpecifier = !string.IsNullOrEmpty(formatParameter) ? $":{formatParameter?.ToString()}" : "";
 
-        if (value is DateTime? || value is DateTime)
+		if (string.IsNullOrEmpty(formatSpecifier))
+		{
+			formatSpecifier = TextFormat;
+		}
+
+		if (value is DateTime? || value is DateTime)
         {
             selectedDateTime = (DateTime)value;
 

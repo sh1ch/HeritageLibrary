@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 
 namespace Heritage.Wpf.ValueConverters;
@@ -15,9 +16,23 @@ namespace Heritage.Wpf.ValueConverters;
 /// </para>
 /// </summary>
 [ValueConversion(typeof(DateTimeOffset), typeof(string))]
-public class DateTimeOffsetFormatConverter : IValueConverter
+public class DateTimeOffsetFormatConverter : DependencyObject, IValueConverter
 {
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+	public static readonly DependencyProperty TextFormatProperty =
+			DependencyProperty.Register(
+				nameof(TextFormat),
+				typeof(string),
+				typeof(DateTimeOffsetFormatConverter),
+				new PropertyMetadata("")
+			);
+
+	public string TextFormat
+	{
+		get => (string)GetValue(TextFormatProperty);
+		set => SetValue(TextFormatProperty, value);
+	}
+
+	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         DateTimeOffset selectedDateTime;
         string displayValue = "";
@@ -29,6 +44,11 @@ public class DateTimeOffsetFormatConverter : IValueConverter
 
         string formatParameter = parameter?.ToString() ?? "";
         string formatSpecifier = !string.IsNullOrEmpty(formatParameter) ? $":{formatParameter?.ToString()}" : "";
+
+        if (string.IsNullOrEmpty(formatSpecifier))
+        {
+            formatSpecifier = TextFormat;
+        }
 
         if (value is DateTimeOffset? || value is DateTimeOffset)
         {
