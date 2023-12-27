@@ -57,7 +57,7 @@ public class DateTimeFormatConverter : DependencyObject, IValueConverter
 
             if (!string.IsNullOrEmpty(formatSpecifier))
             {
-                displayValue = string.Format("{0" + formatSpecifier + "}", selectedDateTime);
+                displayValue = string.Format("{0:" + formatSpecifier + "}", selectedDateTime);
             }
             else
             {
