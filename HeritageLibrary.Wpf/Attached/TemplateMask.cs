@@ -37,8 +37,8 @@ public class TemplateMask
                     _ => "",
                 };
 
-                    // イベントの事前クリア
-                    DataObject.RemovePastingHandler(textBox, Mask_Pasting);
+                // イベントの事前クリア
+                DataObject.RemovePastingHandler(textBox, Mask_Pasting);
                 textBox.PreviewTextInput -= Mask_PreviewTextInput;
                 textBox.PreviewKeyDown -= Mask_PreviewKeyDown;
 
@@ -46,15 +46,15 @@ public class TemplateMask
                 {
                     SetRegex(textBox, new Regex(maskText, RegexOptions.Compiled | RegexOptions.IgnorePatternWhitespace));
 
-                        // イベントを登録
-                        DataObject.AddPastingHandler(textBox, Mask_Pasting);
+                    // イベントを登録
+                    DataObject.AddPastingHandler(textBox, Mask_Pasting);
                     textBox.PreviewTextInput += Mask_PreviewTextInput;
                     textBox.PreviewKeyDown += Mask_PreviewKeyDown;
                 }
                 else
                 {
-                        // 使用されていないときは、添付プロパティをクリアする
-                        textBox.ClearValue(RegexProperty);
+                    // 使用されていないときは、添付プロパティをクリアする
+                    textBox.ClearValue(RegexProperty);
                 }
             }));
 

@@ -67,8 +67,9 @@ public class Password
                             SetIsAttached(passwordBox, true);
                         }
 
-                            // 例外
-                            if (string.IsNullOrEmpty(passwordBox.Password) && string.IsNullOrEmpty(newPassword) ||
+                        // 例外
+                        if (string.IsNullOrEmpty(passwordBox.Password) && 
+                            string.IsNullOrEmpty(newPassword) ||
                             passwordBox.Password == newPassword)
                         {
                             return;
