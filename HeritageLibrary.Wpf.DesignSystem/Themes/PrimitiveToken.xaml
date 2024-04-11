@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:Int32 x:Key="H1_Top">64</sys:Int32>
+    <sys:Int32 x:Key="H1_Bottom">24</sys:Int32>
+    <sys:Int32 x:Key="H2_Top">64</sys:Int32>
+    <sys:Int32 x:Key="H2_Bottom">24</sys:Int32>
+    <sys:Int32 x:Key="H3_Top">40</sys:Int32>
+    <sys:Int32 x:Key="H3_Bottom">24</sys:Int32>
+    <sys:Int32 x:Key="H4_Top">40</sys:Int32>
+    <sys:Int32 x:Key="H4_Bottom">16</sys:Int32>
+    <sys:Int32 x:Key="H5_Top">40</sys:Int32>
+    <sys:Int32 x:Key="H5_Bottom">16</sys:Int32>
+    <sys:Int32 x:Key="H6_Top">24</sys:Int32>
+    <sys:Int32 x:Key="H6_Bottom">16</sys:Int32>
+
+    <Thickness x:Key="H1">0 64 0 24</Thickness>
+    <Thickness x:Key="H2">0 64 0 24</Thickness>
+    <Thickness x:Key="H3">0 40 0 24</Thickness>
+    <Thickness x:Key="H4">0 40 0 16</Thickness>
+    <Thickness x:Key="H5">0 40 0 16</Thickness>
+    <Thickness x:Key="H6">0 24 0 16</Thickness>
+
+    <sys:Int32 x:Key="H_Size_XXL">57</sys:Int32>
+    <sys:Int32 x:Key="H_Size_XL">45</sys:Int32>
+    <sys:Int32 x:Key="H_Size_L">36</sys:Int32>
+    <sys:Int32 x:Key="H_Size_M">32</sys:Int32>
+    <sys:Int32 x:Key="H_Size_S">28</sys:Int32>
+    <sys:Int32 x:Key="H_Size_XS">24</sys:Int32>
+    <sys:Int32 x:Key="H_Size_XXS">20</sys:Int32>
+
+    <sys:Double x:Key="H_LineHeight_XXL">1.4</sys:Double>
+    <sys:Double x:Key="H_LineHeight_XL">1.4</sys:Double>
+    <sys:Double x:Key="H_LineHeight_L">1.4</sys:Double>
+    <sys:Double x:Key="H_LineHeight_M">1.5</sys:Double>
+    <sys:Double x:Key="H_LineHeight_S">1.5</sys:Double>
+    <sys:Double x:Key="H_LineHeight_XS">1.5</sys:Double>
+    <sys:Double x:Key="H_LineHeight_XXS">1.5</sys:Double>
+
+    <sys:Int32 x:Key="H_LetterSpacing_XXL">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_XL">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_L">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_M">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_S">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_XS">40</sys:Int32>
+    <sys:Int32 x:Key="H_LetterSpacing_XXS">40</sys:Int32>
+
+    <sys:Int32 x:Key="P_Size_L">16</sys:Int32>
+    <sys:Int32 x:Key="P_Size_M">14</sys:Int32>
+    <sys:Int32 x:Key="Label_Size_L">14</sys:Int32>
+    <sys:Int32 x:Key="Label_Size_M">12</sys:Int32>
+    <sys:Int32 x:Key="Aside_Size_L">14</sys:Int32>
+    <sys:Int32 x:Key="Aside_Size_M">12</sys:Int32>
+    <sys:Int32 x:Key="Button_Size">16</sys:Int32>
+
+    <sys:Double x:Key="P_LineHeight_L">1.7</sys:Double>
+    <sys:Double x:Key="P_LineHeight_M">1.7</sys:Double>
+    <sys:Double x:Key="Label_LineHeight_L">1.5</sys:Double>
+    <sys:Double x:Key="Label_LineHeight_M">1.5</sys:Double>
+    <sys:Double x:Key="Aside_LineHeight_L">1.7</sys:Double>
+    <sys:Double x:Key="Aside_LineHeight_M">1.7</sys:Double>
+    <sys:Double x:Key="Button_LineHeight">1.5</sys:Double>
+
+    <sys:Int32 x:Key="P_LetterSpacing_L">40</sys:Int32>
+    <sys:Int32 x:Key="P_LetterSpacing_M">40</sys:Int32>
+    <sys:Int32 x:Key="Label_LetterSpacing_L">40</sys:Int32>
+    <sys:Int32 x:Key="Label_LetterSpacing_M">40</sys:Int32>
+    <sys:Int32 x:Key="Aside_LetterSpacing_L">40</sys:Int32>
+    <sys:Int32 x:Key="Aside_LetterSpacing_M">40</sys:Int32>
+    <sys:Int32 x:Key="Button_LetterSpacing">40</sys:Int32>
+
+    <CornerRadius x:Key="CornerRadius_0">0</CornerRadius>
+    <CornerRadius x:Key="CornerRadius_8">8</CornerRadius>
+    <CornerRadius x:Key="CornerRadius_16">16</CornerRadius>
+    <CornerRadius x:Key="CornerRadius_32">32</CornerRadius>
+    
+</ResourceDictionary>

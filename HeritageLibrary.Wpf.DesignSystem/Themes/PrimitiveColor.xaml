@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- ニュートラルカラー -->
+    <SolidColorBrush x:Key="White">#FFFFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="Black">#FF000000</SolidColorBrush>
+
+    <SolidColorBrush x:Key="Gray_50">#FFF2F2F2</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_100">#FFE6E6E6</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_200">#FFCCCCCC</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_300">#FFB3B3B3</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_400">#FF999999</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Gray_420">#FF949494</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_500">#FF7F7F7F</SolidColorBrush>
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Gray_536">#FF767676</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できるカラー  -->
+    <SolidColorBrush x:Key="Gray_600">#FF666666</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できるカラー  -->
+    <SolidColorBrush x:Key="Gray_700">#FF4D4D4D</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_800">#FF333333</SolidColorBrush>
+    <SolidColorBrush x:Key="Gray_900">#FF1A1A1A</SolidColorBrush>
+
+</ResourceDictionary>
