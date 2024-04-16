@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/HeritageLibrary.Wpf.DesignSystem;component/Themes/PrimitiveColor.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- セマンティックカラー -->
+    <!-- 
+       - デザインスタイルや UI を問わず、特定の意味/目的が割り当てられるカラーです。
+       - 緑といえば成功、赤といえばエラー、というように一貫性のある特定の意味を持った視覚的な共通言語になります。
+       -->
+
+    <SolidColorBrush x:Key="Success1" Color="{StaticResource Green_600}" />
+    <SolidColorBrush x:Key="Success2" Color="{StaticResource Green_800}" />
+
+    <SolidColorBrush x:Key="Error1" Color="{StaticResource Red_800}" />
+    <SolidColorBrush x:Key="Error2" Color="{StaticResource Red_900}" />
+
+    <SolidColorBrush x:Key="Warning1_YL" Color="{StaticResource Yellow_700}" />
+    <SolidColorBrush x:Key="Warning2_YL" Color="{StaticResource Yellow_900}" />
+
+    <SolidColorBrush x:Key="Warning1_OR" Color="{StaticResource Orange_600}" />
+    <SolidColorBrush x:Key="Warning2_OR" Color="{StaticResource Orange_800}" />
+
+</ResourceDictionary>

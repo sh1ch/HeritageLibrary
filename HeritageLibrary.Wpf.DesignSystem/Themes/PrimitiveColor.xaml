@@ -1,25 +1,200 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <!-- ニュートラルカラー -->
-    <SolidColorBrush x:Key="White">#FFFFFFFF</SolidColorBrush>
-    <SolidColorBrush x:Key="Black">#FF000000</SolidColorBrush>
+    <!-- プリミティブカラー 2.0 -->
+    <!-- 
+       - カラースタイルの基盤となる基本的な色で構成され、様々なサービスに統一感のあるカラースキームを作成するために利用します。
+       - 各ベースカラーは広範なカラー設定を導入するための色相/明度の段階で構成されています。
+       -->
 
-    <SolidColorBrush x:Key="Gray_50">#FFF2F2F2</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_100">#FFE6E6E6</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_200">#FFCCCCCC</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_300">#FFB3B3B3</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_400">#FF999999</SolidColorBrush>
+    <!-- Blue -->
+    <SolidColorBrush x:Key="Blue_50">#FFE8F1FE</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_100">#FFD9E6FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_200">#FFC5D7FB</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_300">#FF9DB7F9</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_400">#FF7096F8</SolidColorBrush>
     <!-- ↓ white に対して 3:1 以上を確保できる -->
-    <SolidColorBrush x:Key="Gray_420">#FF949494</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_500">#FF7F7F7F</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_500">#FF4979F5</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
     <!-- ↓ white に対して 4.5:1 以上を確保できる -->
-    <SolidColorBrush x:Key="Gray_536">#FF767676</SolidColorBrush>
-    <!-- ↑ black に対して 4.5:1 以上を確保できるカラー  -->
-    <SolidColorBrush x:Key="Gray_600">#FF666666</SolidColorBrush>
-    <!-- ↑ black に対して 3:1 以上を確保できるカラー  -->
-    <SolidColorBrush x:Key="Gray_700">#FF4D4D4D</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_800">#FF333333</SolidColorBrush>
-    <SolidColorBrush x:Key="Gray_900">#FF1A1A1A</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_600">#FF3460FB</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_700">#FF264AF4</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Blue_800">#FF0031D8</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_900">#FF0017C1</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_1000">#FF00118F</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_1100">#FF000071</SolidColorBrush>
+    <SolidColorBrush x:Key="Blue_1200">#FF000060</SolidColorBrush>
+
+    <!-- LightBlue -->
+    <SolidColorBrush x:Key="LightBlue_50">#FFF0F9FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_100">#FFDCF0FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_200">#FFC0E4FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_300">#FF97D3FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_400">#FF57B8FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_500">#FF39ABFF</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="LightBlue_600">#FF008BF2</SolidColorBrush>
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="LightBlue_700">#FF0877D7</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="LightBlue_800">#FF0066BE</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="LightBlue_900">#FF0055AD</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_1000">#FF00428C</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_1100">#FF00316A</SolidColorBrush>
+    <SolidColorBrush x:Key="LightBlue_1200">#FF00234B</SolidColorBrush>
+    
+    <!-- Cyan -->
+    <SolidColorBrush x:Key="Cyan_50">#FFE6FCFF</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_100">#FFC8F8FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_200">#FF99F2FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_300">#FF79E2F2</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_400">#FF2BC8E4</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_500">#FF01B7D6</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Cyan_600">#FF00A3BF</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_700">#FF008DA6</SolidColorBrush>
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Cyan_800">#FF008299</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Cyan_900">#FF006F83</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Cyan_1000">#FF006173</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_1100">#FF004C59</SolidColorBrush>
+    <SolidColorBrush x:Key="Cyan_1200">#FF003741</SolidColorBrush>
+    
+    <!-- Green -->
+    <SolidColorBrush x:Key="Green_50">#FFE6F5EC</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_100">#FFC2E5D1</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_200">#FF9BD4B5</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_300">#FF71C598</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_400">#FF51B883</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_500">#FF2CAC6E</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Green_600">#FF259D63</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_700">#FF1D8B56</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Green_800">#FF197A4B</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Green_900">#FF115A36</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_1000">#FF0C472A</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_1100">#FF08351F</SolidColorBrush>
+    <SolidColorBrush x:Key="Green_1200">#FF032213</SolidColorBrush>
+    
+    <!-- Lime -->
+    <SolidColorBrush x:Key="Lime_50">#FFEBFAD9</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_100">#FFD0F5A2</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_200">#FFC0F354</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_300">#FFADE830</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_400">#FF9DDD15</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_500">#FF8CC80C</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_600">#FF7EB40D</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Lime_700">#FF6FA104</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_800">#FF618E00</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Lime_900">#FF507500</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Lime_1000">#FF3E5A00</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_1100">#FF2C4100</SolidColorBrush>
+    <SolidColorBrush x:Key="Lime_1200">#FF1E2D00</SolidColorBrush>
+    
+    <!-- Yellow -->
+    <SolidColorBrush x:Key="Yellow_50">#FFFBF5E0</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_100">#FFFFF0B3</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_200">#FFFFE380</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_300">#FFFFD43D</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_400">#FFFFC700</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_500">#FFEBB700</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_600">#FFD2A400</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Yellow_700">#FFB78F00</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_800">#FFA58000</SolidColorBrush>
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Yellow_900">#FF927200</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Yellow_1000">#FF806300</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Yellow_1100">#FF6E5600</SolidColorBrush>
+    <SolidColorBrush x:Key="Yellow_1200">#FF604B00</SolidColorBrush>
+
+    <!-- Orange -->
+    <SolidColorBrush x:Key="Orange_50">#FFFFEEE2</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_100">#FFFFDFCA</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_200">#FFFFC199</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_300">#FFFFA66D</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_400">#FFFF8D44</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_500">#FFFF7628</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Orange_600">#FFFB5B01</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_700">#FFE25100</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Orange_800">#FFC74700</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_900">#FFAC3E00</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Orange_1000">#FF8B3200</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_1100">#FF6D2700</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange_1200">#FF541E00</SolidColorBrush>
+    
+    <!-- Red -->
+    <SolidColorBrush x:Key="Red_50">#FFFDEEEE</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_100">#FFFFDADA</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_200">#FFFFBBBB</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_300">#FFFF9696</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_400">#FFFF7171</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Red_500">#FFFF5454</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_600">#FFFE3939</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_700">#FFFA0000</SolidColorBrush>
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Red_800">#FFEC0000</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Red_900">#FFCE0000</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Red_1000">#FFA90000</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_1100">#FF850000</SolidColorBrush>
+    <SolidColorBrush x:Key="Red_1200">#FF620000</SolidColorBrush>
+    
+    <!-- Magenta -->
+    <SolidColorBrush x:Key="Magenta_50">#FFF3E5F4</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_100">#FFFFD0FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_200">#FFFFAEFF</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_300">#FFFF8EFF</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_400">#FFF661F6</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Magenta_500">#FFF137F1</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_600">#FFDB00DB</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Magenta_700">#FFC000C0</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_800">#FFAA00AA</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Magenta_900">#FF8B008B</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_1000">#FF6C006C</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_1100">#FF500050</SolidColorBrush>
+    <SolidColorBrush x:Key="Magenta_1200">#FF3B003B</SolidColorBrush>
+    
+    <!-- Purple -->
+    <SolidColorBrush x:Key="Purple_50">#FFF1EAFA</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_100">#FFECDDFF</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_200">#FFDDC2FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_300">#FFCDA6FF</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_400">#FFBB87FF</SolidColorBrush>
+    <!-- ↓ white に対して 3:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Purple_500">#FFA565F8</SolidColorBrush>
+    <!-- ↑ black に対して 4.5:1 以上を確保できる  -->
+    <!-- ↓ white に対して 4.5:1 以上を確保できる -->
+    <SolidColorBrush x:Key="Purple_600">#FF8843E1</SolidColorBrush>
+    <!-- ↑ black に対して 3:1 以上を確保できる  -->
+    <SolidColorBrush x:Key="Purple_700">#FF6F23D0</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_800">#FF5C10BE</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_900">#FF5109AD</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_1000">#FF41048E</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_1100">#FF30016C</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple_1200">#FF21004B</SolidColorBrush>
 
 </ResourceDictionary>

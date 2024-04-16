@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/HeritageLibrary.Wpf.DesignSystem;component/Themes/PrimitiveColor.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- アクセントカラー -->
+    <!-- 
+       - 特定の要素に注意を引くため多用されない程度に使用します。
+       - 特定の意味を持ったハイライト表現、CTA ボタンに使うことで抑揚を変えて重要性を示すことができます。
+       - アクセントカラーを多用するとカラースキームの一貫性を損ねるため、注意が必要です。
+       -->
+
+    <SolidColorBrush x:Key="Accent_Purple500" Color="{StaticResource Purple_500}"/>
+    <SolidColorBrush x:Key="Accent_Blue600" Color="{StaticResource Blue_600}"/>
+    <SolidColorBrush x:Key="Accent_LightBlue600" Color="{StaticResource LightBlue_600}"/>
+    <SolidColorBrush x:Key="Accent_Cyan600" Color="{StaticResource Cyan_600}"/>
+    <SolidColorBrush x:Key="Accent_Green800" Color="{StaticResource Green_800}"/>
+    <SolidColorBrush x:Key="Accent_Lime700" Color="{StaticResource Lime_700}"/>
+    <SolidColorBrush x:Key="Accent_Yellow700" Color="{StaticResource Yellow_700}"/>
+    <SolidColorBrush x:Key="Accent_Orange600" Color="{StaticResource Orange_600}"/>
+    <SolidColorBrush x:Key="Accent_Orange1100" Color="{StaticResource Orange_1100}"/>
+
+</ResourceDictionary>
