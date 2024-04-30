@@ -5,39 +5,39 @@
         <ResourceDictionary Source="/HeritageLibrary.Wpf.DesignSystem;component/Themes/NeutralColor.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <SolidColorBrush x:Key="Primary_Blue" Color="{StaticResource Blue_900}" />
-    <SolidColorBrush x:Key="Secondary_Blue" Color="{StaticResource Blue_700}" />
-    <SolidColorBrush x:Key="Tertiary_Blue" Color="{StaticResource Blue_1000}" />
-    <SolidColorBrush x:Key="Background_Blue" Color="{StaticResource Blue_50}" />
+    <SolidColorBrush x:Key="Primary_Blue" Color="{Binding Color, Source={StaticResource Blue_900}}" />
+    <SolidColorBrush x:Key="Secondary_Blue" Color="{Binding Color, Source={StaticResource Blue_700}}" />
+    <SolidColorBrush x:Key="Tertiary_Blue" Color="{Binding Color, Source={StaticResource Blue_1000}}" />
+    <SolidColorBrush x:Key="Background_Blue" Color="{Binding Color, Source={StaticResource Blue_50}}" />
 
-    <SolidColorBrush x:Key="Primary_Green" Color="{StaticResource Green_600}" />
-    <SolidColorBrush x:Key="Secondary_Green" Color="{StaticResource Green_800}" />
-    <SolidColorBrush x:Key="Tertiary_Green" Color="{StaticResource Green_1000}" />
-    <SolidColorBrush x:Key="Background_Green" Color="{StaticResource Green_50}" />
+    <SolidColorBrush x:Key="Primary_Green" Color="{Binding Color, Source={StaticResource Green_600}}" />
+    <SolidColorBrush x:Key="Secondary_Green" Color="{Binding Color, Source={StaticResource Green_800}}" />
+    <SolidColorBrush x:Key="Tertiary_Green" Color="{Binding Color, Source={StaticResource Green_1000}}" />
+    <SolidColorBrush x:Key="Background_Green" Color="{Binding Color, Source={StaticResource Green_50}}" />
 
-    <SolidColorBrush x:Key="Primary_Neutral" Color="{StaticResource Gray_900}" />
-    <SolidColorBrush x:Key="Secondary_Neutral" Color="{StaticResource Gray_536}" />
-    <SolidColorBrush x:Key="Tertiary_Neutral" Color="{StaticResource Gray_420}" />
-    <SolidColorBrush x:Key="Background_Neutral" Color="{StaticResource Gray_50}" />
+    <SolidColorBrush x:Key="Primary_Neutral" Color="{Binding Color, Source={StaticResource Gray_900}}" />
+    <SolidColorBrush x:Key="Secondary_Neutral" Color="{Binding Color, Source={StaticResource Gray_536}}" />
+    <SolidColorBrush x:Key="Tertiary_Neutral" Color="{Binding Color, Source={StaticResource Gray_420}}" />
+    <SolidColorBrush x:Key="Background_Neutral" Color="{Binding Color, Source={StaticResource Gray_50}}" />
 
-    <SolidColorBrush x:Key="Primary_LightBlue" Color="{StaticResource LightBlue_800}" />
-    <SolidColorBrush x:Key="Secondary_LightBlue" Color="{StaticResource LightBlue_600}" />
-    <SolidColorBrush x:Key="Tertiary_LightBlue" Color="{StaticResource LightBlue_1000}" />
-    <SolidColorBrush x:Key="Background_LightBlue" Color="{StaticResource LightBlue_50}" />
+    <SolidColorBrush x:Key="Primary_LightBlue" Color="{Binding Color, Source={StaticResource LightBlue_800}}" />
+    <SolidColorBrush x:Key="Secondary_LightBlue" Color="{Binding Color, Source={StaticResource LightBlue_600}}" />
+    <SolidColorBrush x:Key="Tertiary_LightBlue" Color="{Binding Color, Source={StaticResource LightBlue_1000}}" />
+    <SolidColorBrush x:Key="Background_LightBlue" Color="{Binding Color, Source={StaticResource LightBlue_50}}" />
 
-    <SolidColorBrush x:Key="Primary_Cyan" Color="{StaticResource Cyan_700}" />
-    <SolidColorBrush x:Key="Secondary_Cyan" Color="{StaticResource Cyan_600}" />
-    <SolidColorBrush x:Key="Tertiary_Cyan" Color="{StaticResource Cyan_1000}" />
-    <SolidColorBrush x:Key="Background_Cyan" Color="{StaticResource Cyan_50}" />
+    <SolidColorBrush x:Key="Primary_Cyan" Color="{Binding Color, Source={StaticResource Cyan_700}}" />
+    <SolidColorBrush x:Key="Secondary_Cyan" Color="{Binding Color, Source={StaticResource Cyan_600}}" />
+    <SolidColorBrush x:Key="Tertiary_Cyan" Color="{Binding Color, Source={StaticResource Cyan_1000}}" />
+    <SolidColorBrush x:Key="Background_Cyan" Color="{Binding Color, Source={StaticResource Cyan_50}}" />
 
-    <SolidColorBrush x:Key="Primary_Orange" Color="{StaticResource Orange_600}" />
-    <SolidColorBrush x:Key="Secondary_Orange" Color="{StaticResource Orange_800}" />
-    <SolidColorBrush x:Key="Tertiary_Orange" Color="{StaticResource Orange_1100}" />
-    <SolidColorBrush x:Key="Background_Orange" Color="{StaticResource Orange_50}" />
+    <SolidColorBrush x:Key="Primary_Orange" Color="{Binding Color, Source={StaticResource Orange_600}}" />
+    <SolidColorBrush x:Key="Secondary_Orange" Color="{Binding Color, Source={StaticResource Orange_800}}" />
+    <SolidColorBrush x:Key="Tertiary_Orange" Color="{Binding Color, Source={StaticResource Orange_1100}}" />
+    <SolidColorBrush x:Key="Background_Orange" Color="{Binding Color, Source={StaticResource Orange_50}}" />
 
-    <SolidColorBrush x:Key="Primary_Purple" Color="{StaticResource Purple_700}" />
-    <SolidColorBrush x:Key="Secondary_Purple" Color="{StaticResource Purple_600}" />
-    <SolidColorBrush x:Key="Tertiary_Purple" Color="{StaticResource Purple_1000}" />
-    <SolidColorBrush x:Key="Background_Purple" Color="{StaticResource Purple_50}" />
+    <SolidColorBrush x:Key="Primary_Purple" Color="{Binding Color, Source={StaticResource Purple_700}}" />
+    <SolidColorBrush x:Key="Secondary_Purple" Color="{Binding Color, Source={StaticResource Purple_600}}" />
+    <SolidColorBrush x:Key="Tertiary_Purple" Color="{Binding Color, Source={StaticResource Purple_1000}}" />
+    <SolidColorBrush x:Key="Background_Purple" Color="{Binding Color, Source={StaticResource Purple_50}}" />
 
 </ResourceDictionary>
