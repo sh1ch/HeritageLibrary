@@ -1,6 +1,7 @@
 ﻿using Heritage.Attributes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -33,6 +34,10 @@ public class ResourcesDescriptionConverter : IValueConverter
         {
             var attribute = fieldInfo.GetCustomAttribute(typeof(ResourcesDescriptionAttribute), false) as ResourcesDescriptionAttribute;
             attributeValue = attribute?.Description ?? "";
+        }
+        else
+        {
+            Debug.WriteLine($"{nameof(ResourcesDescriptionConverter)}: fieldInfo の取得に失敗しました。Enum 値のテキストの置換はできません。");
         }
 
         return attributeValue;
