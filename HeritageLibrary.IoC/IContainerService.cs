@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeritageLibrary.IoC;
+namespace Heritage.IoC;
 
 /// <summary>
 /// <see cref="IContainerService"/> インターフェースは、DI サービスに関するパラメーターを定義します。

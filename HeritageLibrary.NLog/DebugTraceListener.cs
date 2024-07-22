@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeritageLibrary.NLog;
+namespace Heritage.NLog;
 
 /// <summary>
 /// <see cref="DebugTraceListener"/> クラスは、NLog 用の出力に対応したトレース出力、または、デバッグ出力を監視する最もシンプルなリスナーです。

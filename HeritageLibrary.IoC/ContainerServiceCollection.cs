@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeritageLibrary.IoC;
+namespace Heritage.IoC;
 
 /// <summary>
 /// <see cref="ContainerServiceCollection"/> クラスは、シンプルな機能を提供する DI コレクションです。
