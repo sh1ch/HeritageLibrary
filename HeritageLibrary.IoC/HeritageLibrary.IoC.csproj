@@ -5,6 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<RootNamespace>Heritage</RootNamespace>
     <Nullable>enable</Nullable>
+
+	<!-- バージョンを設定 -->
+	<VersionPrefix>0.0</VersionPrefix>
+	<BuildNumber>$([System.DateTime]::UtcNow.ToString('yy'))</BuildNumber>
+	<RevisionNumber>$([System.DateTime]::UtcNow.ToString('MMdd'))</RevisionNumber>
+
+	<Version>$(VersionPrefix).1</Version>
+	<AssemblyVersion>$(VersionPrefix).1</AssemblyVersion>
+	<FileVersion>$(VersionPrefix).$(BuildNumber).$(RevisionNumber)</FileVersion>
   </PropertyGroup>
 
 </Project>

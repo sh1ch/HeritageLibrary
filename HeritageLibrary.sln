@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Windows", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.Wpf.DesignSystem", "HeritageLibrary.Wpf.DesignSystem\HeritageLibrary.Wpf.DesignSystem.csproj", "{8F127F22-B5CB-4A1F-BF32-E6F742E5F2D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.NLog", "HeritageLibrary.NLog\HeritageLibrary.NLog.csproj", "{66CB97B4-6275-493E-ADE7-EA84FF25DA8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeritageLibrary.NLog", "HeritageLibrary.NLog\HeritageLibrary.NLog.csproj", "{66CB97B4-6275-493E-ADE7-EA84FF25DA8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeritageLibrary.Compression", "HeritageLibrary.Compression\HeritageLibrary.Compression.csproj", "{77D9660B-C152-47A4-8796-045501D2D878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{66CB97B4-6275-493E-ADE7-EA84FF25DA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CB97B4-6275-493E-ADE7-EA84FF25DA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CB97B4-6275-493E-ADE7-EA84FF25DA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D9660B-C152-47A4-8796-045501D2D878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D9660B-C152-47A4-8796-045501D2D878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D9660B-C152-47A4-8796-045501D2D878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D9660B-C152-47A4-8796-045501D2D878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
