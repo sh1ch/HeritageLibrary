@@ -12,16 +12,16 @@ namespace Heritage.Wpf;
 /// </summary>
 public class WindowService : IWindowService
 {
-	private readonly Window _window;
+	private readonly System.Windows.Window _window;
 
-	public Window Window => _window;
+	public System.Windows.Window Window => _window;
 	public IntPtr WindowHandle => new System.Windows.Interop.WindowInteropHelper(_window).Handle;
 
 	/// <summary>
 	/// <see cref="WindowService"/> クラスの新しいインスタンスを初期化します。
 	/// </summary>
 	/// <param name="window">ウィンドウのインスタンス。</param>
-	public WindowService(Window window)
+	public WindowService(System.Windows.Window window)
 	{
 		if (window == null)
 		{

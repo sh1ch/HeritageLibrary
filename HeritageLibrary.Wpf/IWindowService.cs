@@ -12,7 +12,7 @@ namespace Heritage.Wpf;
 /// </summary>
 public interface IWindowService
 {
-	Window Window { get; }
+	System.Windows.Window Window { get; }
 	IntPtr WindowHandle { get; }
 
 	void Close();

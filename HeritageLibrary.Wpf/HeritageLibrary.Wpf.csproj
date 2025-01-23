@@ -20,4 +20,13 @@
     <ProjectReference Include="..\HeritageLibrary\HeritageLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Native\ApiHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\WindowPlacementSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

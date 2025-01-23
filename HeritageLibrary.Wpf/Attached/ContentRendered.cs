@@ -33,7 +33,7 @@ public class ContentRendered
                             return;
                         }
 
-                        var window = Window.GetWindow(control);
+                        var window = System.Windows.Window.GetWindow(control);
 
                         if (window == null)
                         {
