@@ -27,20 +27,48 @@ public class ResourcesDescriptionConverter : IValueConverter
             return "";
         }
 
-        var attributeValue = "";
-        var fieldInfo = value.GetType().GetField(value.ToString());
-
-        if (fieldInfo != null)
+        if (value is Array array)
         {
-            var attribute = fieldInfo.GetCustomAttribute(typeof(ResourcesDescriptionAttribute), false) as ResourcesDescriptionAttribute;
-            attributeValue = attribute?.Description ?? "";
+			var attributeValues = new List<string>();
+
+			foreach (var item in array)
+            {
+				var fieldInfo = item.GetType().GetField(item.ToString());
+				
+				if (fieldInfo != null)
+                {
+					var attribute = fieldInfo.GetCustomAttribute(typeof(ResourcesDescriptionAttribute), false) as ResourcesDescriptionAttribute;
+
+					if (attribute != null)
+					{
+						attributeValues.Add(attribute.Description);
+					}
+					else
+					{
+						attributeValues.Add(item.ToString());
+					}
+				}
+			}
+
+			return attributeValues;
         }
         else
         {
-            Debug.WriteLine($"{nameof(ResourcesDescriptionConverter)}: fieldInfo の取得に失敗しました。Enum 値のテキストの置換はできません。");
-        }
+			var attributeValue = "";
+			var fieldInfo = value.GetType().GetField(value.ToString());
 
-        return attributeValue;
+			if (fieldInfo != null)
+			{
+				var attribute = fieldInfo.GetCustomAttribute(typeof(ResourcesDescriptionAttribute), false) as ResourcesDescriptionAttribute;
+				attributeValue = attribute?.Description ?? "";
+			}
+			else
+			{
+				Debug.WriteLine($"{nameof(ResourcesDescriptionConverter)}: fieldInfo の取得に失敗しました。Enum 値のテキストの置換はできません。");
+			}
+
+			return attributeValue;
+		}
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
