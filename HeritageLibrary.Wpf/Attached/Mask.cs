@@ -30,8 +30,21 @@ public class Mask
 
                 var maskText = args.NewValue as string ?? "";
 
-                // イベントの事前クリア
-                DataObject.RemovePastingHandler(textBox, Mask_Pasting);
+				if (!maskText.StartsWith("^[") && !maskText.EndsWith("]+$"))
+				{
+                    if (!maskText.StartsWith("^["))
+                    {
+                        maskText = "^[" + maskText;
+                    }
+
+					if (!maskText.EndsWith("]+$"))
+					{
+						maskText = maskText + "]+$";
+					}
+				}
+
+				// イベントの事前クリア
+				DataObject.RemovePastingHandler(textBox, Mask_Pasting);
                 textBox.PreviewTextInput -= Mask_PreviewTextInput;
                 textBox.PreviewKeyDown -= Mask_PreviewKeyDown;
 
