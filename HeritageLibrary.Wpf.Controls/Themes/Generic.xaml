@@ -1,7 +1,7 @@
-<ResourceDictionary
+﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:heri_ctrl="clr-namespace:Heritage.Wpf.Control">
+    xmlns:heri_ctrl="clr-namespace:Heritage.Wpf.Controls">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/DataGridCustomTextBoxColumnTheme.xaml" />
         <ResourceDictionary Source="/HeritageLibrary.Wpf.Controls;component/Themes/ToggleControlTheme.xaml" />

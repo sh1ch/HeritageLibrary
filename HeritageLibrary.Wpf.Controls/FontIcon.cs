@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Runtime.CompilerServices;
 
-namespace Heritage.Wpf.Control;
+namespace Heritage.Wpf.Controls;
 
 public class FontIcon : TabControl
 {

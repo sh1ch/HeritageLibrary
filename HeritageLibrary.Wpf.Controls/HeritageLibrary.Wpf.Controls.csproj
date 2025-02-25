@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <RootNamespace>Heritage.Wpf.Control</RootNamespace>
+    <RootNamespace>Heritage.Wpf.Controls</RootNamespace>
 
 	<!-- バージョンを設定 -->
 	<VersionPrefix>0.0</VersionPrefix>

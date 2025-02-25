@@ -8,7 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace Heritage.Wpf.Control;
+namespace Heritage.Wpf.Controls;
 
 /// <summary>
 /// <see cref="DataGridCustomTextBoxColumn"/> クラスは、データグリッドで利用するためのテキストコントロール クラスです。
