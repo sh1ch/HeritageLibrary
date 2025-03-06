@@ -54,20 +54,20 @@ public class DateTimeOffsetFormatConverter : DependencyObject, IValueConverter
         {
             selectedDateTime = (DateTimeOffset)value;
 
-            if (!string.IsNullOrEmpty(formatSpecifier))
+            if (selectedDateTime == DateTimeOffset.MinValue || selectedDateTime == DateTimeOffset.MaxValue)
+	        {
+                // 例外
+				displayValue = "";
+			}
+            else if (!string.IsNullOrEmpty(formatSpecifier))
             {
+                // フォーマットの指定あり
                 displayValue = string.Format("{0:" + formatSpecifier + "}", selectedDateTime);
             }
             else
             {
-                if (selectedDateTime == DateTimeOffset.MinValue || selectedDateTime == DateTimeOffset.MaxValue)
-                {
-                    displayValue = "";
-                }
-                else
-                {
-                    displayValue = selectedDateTime.ToString();
-                }
+                // フォーマットの指定なし
+                displayValue = selectedDateTime.ToString();
             }
         }
 
