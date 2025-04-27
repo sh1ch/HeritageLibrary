@@ -8,9 +8,6 @@ using static Heritage.Wpf.Native.ApiHelper;
 
 namespace Heritage.Wpf.Windows;
 
-/// <summary>
-/// <see cref="WindowPlacementApplicationSettings"/> クラスは、＊です。
-/// </summary>
 public class WindowPlacementApplicationSettings : ApplicationSettingsBase
 {
 	[UserScopedSetting]

@@ -20,8 +20,6 @@ namespace Heritage.Wpf.ValueConverters;
 [ValueConversion(typeof(bool?), typeof(Visibility))]
 public class BoolToVisibilityConverter : DependencyObject, IValueConverter
 {
-    #region DependencyProperties
-
     /// <summary>
     /// <see cref="bool"/> 値を逆にして評価するかどうかを決める値を設定します。
     /// </summary>
@@ -92,8 +90,6 @@ public class BoolToVisibilityConverter : DependencyObject, IValueConverter
         get =>(Visibility)GetValue(NullValueProperty);
         set => SetValue(NullValueProperty, value);
     }
-
-    #endregion
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
