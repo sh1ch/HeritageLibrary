@@ -26,10 +26,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type hf_ctrl:DataGridCustomTextBoxColumn}">
-                    <Border x:Name="MainBorder" Padding="2" 
-                            BorderThickness="1" BorderBrush="Transparent"
+                    <Border x:Name="MainBorder"
+                            Padding="0" 
+                            BorderThickness="0" BorderBrush="Transparent"
+                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                             Background="{TemplateBinding Background}">
-                        <Grid>
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
@@ -50,9 +52,15 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <!-- 行の選択中 -->
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridCell}, Path=IsSelected}" Value="True">
+                            <Setter TargetName="SubTextBlock" Property="Foreground" Value="White" />
+                        </DataTrigger>
+
                         <Trigger Property="IsFocused" Value="True">
                             <Setter TargetName="MainBorder" Property="Background" Value="White" />
                             <Setter TargetName="MainBorder" Property="BorderBrush" Value="White" />
+                            <Setter TargetName="SubTextBlock" Property="Foreground" Value="#FF666666" />
                             <Setter Property="Foreground" Value="Black" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
