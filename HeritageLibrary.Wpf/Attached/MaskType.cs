@@ -31,4 +31,8 @@ public enum MaskType : int
     /// 全角カナ
     /// </summary>
     KATAKANA = 0x04,
+	/// <summary>
+	/// 半角数字 (0-9)+実数の "." 
+	/// </summary>
+	HalfReal = 0x05,
 }

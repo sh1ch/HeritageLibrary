@@ -34,7 +34,8 @@ public class TemplateMask
                     MaskType.HalfAlphanumeric => "^[a-zA-Z0-9]+$",
                     MaskType.HIRAGANA => "^[ぁ-ん!ー]+$",
                     MaskType.KATAKANA => "^[ァ-ヴ!ー]+$",
-                    _ => "",
+                    MaskType.HalfReal => @"^-?\d+(\.\d*)?$",
+					_ => "",
                 };
 
                 // イベントの事前クリア
