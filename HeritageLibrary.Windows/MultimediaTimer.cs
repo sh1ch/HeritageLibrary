@@ -50,13 +50,13 @@ public sealed class MultimediaTimer : IDisposable
 	private const int TIME_ONESHOT = 0x00; // イベントを１度だけ実行
 	private const int TIME_PERIODIC = 0x01; // イベントを繰り返し実行
 
-	private delegate void LPTIMECALLBACK(uint uTimerID, uint uMsg, ref uint dwUser, uint dw1, uint dw2);
+	private delegate void LPTIMECALLBACK(uint uTimerID, uint uMsg, UIntPtr dwUser, UIntPtr dw1, UIntPtr dw2);
 
 	[DllImport("winmm.dll", SetLastError = true, EntryPoint = "timeGetDevCaps")]
 	static extern uint __TimeGetDevCaps(ref TIMECAPS timeCaps, uint sizeTimeCaps);
 
 	[DllImport("winmm.dll", SetLastError = true, EntryPoint = "timeSetEvent")]
-	private static extern uint __TimeSetEvent(uint uDelay, uint uResolution, LPTIMECALLBACK lpTimeProc, ref uint dwUser, uint fuEvent);
+	private static extern uint __TimeSetEvent(uint uDelay, uint uResolution, LPTIMECALLBACK lpTimeProc, UIntPtr dwUser, uint fuEvent);
 
 	[DllImport("winmm.dll", SetLastError = true, EntryPoint = "timeKillEvent")]
 	private static extern uint __TimeKillEvent(uint uTimerId);
@@ -175,13 +175,13 @@ public sealed class MultimediaTimer : IDisposable
 			throw new InvalidOperationException($"Invalid to start timer. Interval ({interval} ms) is less than resolution ({resolution} ms).");
 		}
 
-		LPTIMECALLBACK? callback = (uint uTimerID, uint uMsg, ref uint dw, uint dw1, uint dw2) =>
+		LPTIMECALLBACK? callback = (uTimerID, uMsg, dwUser, dw1, dw2) =>
 		{
 			action();
 			DisposeOneshot(uTimerID);
 		};
 
-		var timerID = __TimeSetEvent(interval, resolution, callback, ref dwUser, TIME_ONESHOT);
+		var timerID = __TimeSetEvent(interval, resolution, callback, UIntPtr.Zero, TIME_ONESHOT);
 		var newshot = new OneShotCallback { TimerID = timerID, Callback = callback };
 
 		OneShotCallbacks.Add(newshot);
@@ -211,14 +211,14 @@ public sealed class MultimediaTimer : IDisposable
 			throw new InvalidOperationException($"Invalid to start timer. Interval ({interval} ms) is less than resolution ({resolution} ms).");
 		}
 
-		_TimeCallback = (uint uTimerID, uint uMsg, ref uint dw, uint dw1, uint dw2) =>
+		_TimeCallback = (uTimerID, uMsg, dwUser, dw1, dw2) =>
 		{
 			var now = __GetTime();
 
 			Elapsed?.Invoke(this, EventArgs.Empty);
 		};
 
-		_TimerID = __TimeSetEvent(interval, resolution, _TimeCallback, ref dwUser, TIME_PERIODIC);
+		_TimerID = __TimeSetEvent(interval, resolution, _TimeCallback, UIntPtr.Zero, TIME_PERIODIC);
 	}
 
 	/// <summary>
