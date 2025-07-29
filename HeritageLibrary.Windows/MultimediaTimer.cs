@@ -134,7 +134,6 @@ public sealed class MultimediaTimer : IDisposable
 	public MultimediaTimer(uint interval)
 	{
 		InitializeDeviceTimeCaps();
-
 		Interval = interval;
 	}
 
@@ -143,9 +142,13 @@ public sealed class MultimediaTimer : IDisposable
 	/// </summary>
 	public void Dispose()
 	{
-		if (!IsRunning) return;
+		if (IsRunning)
+		{
+			Stop();
+		}
 
-		Stop();
+		// delegate を解放
+		_TimeCallback = null;
 	}
 
 	/// <summary>
@@ -168,8 +171,6 @@ public sealed class MultimediaTimer : IDisposable
 	/// <exception cref="InvalidOperationException"></exception>
 	private void OneShot(Action action, uint interval, uint resolution)
 	{
-		uint dwUser = 0;
-
 		if (Interval <= resolution)
 		{
 			throw new InvalidOperationException($"Invalid to start timer. Interval ({interval} ms) is less than resolution ({resolution} ms).");
@@ -204,7 +205,10 @@ public sealed class MultimediaTimer : IDisposable
 
 	private void Start(uint interval, uint resolution)
 	{
-		uint dwUser = 0;
+		if (IsRunning)
+		{ 
+			throw new InvalidOperationException("Timer is already running.");
+		}
 
 		if (Interval <= resolution)
 		{
@@ -219,6 +223,11 @@ public sealed class MultimediaTimer : IDisposable
 		};
 
 		_TimerID = __TimeSetEvent(interval, resolution, _TimeCallback, UIntPtr.Zero, TIME_PERIODIC);
+
+		if (_TimerID == 0)
+		{
+			throw new InvalidOperationException("Failed to start multimedia timer.");
+		}
 	}
 
 	/// <summary>
@@ -231,16 +240,14 @@ public sealed class MultimediaTimer : IDisposable
 
 		var mmsys = __TimeKillEvent(_TimerID);
 
-		if (mmsys == TIMERR_NOERROR)
+		if (mmsys != TIMERR_NOERROR)
 		{
-			_TimeCallback = null;
-		}
-		else
-		{
-			// なんらかのエラーが発生していた
+			throw new InvalidOperationException("Failed to stop multimedia timer.");
 		}
 
 		_TimerID = 0;
+
+		// ※ delegate はここで null にしない。Dispose で安全に解放する
 	}
 
 	/// <summary>
@@ -256,23 +263,15 @@ public sealed class MultimediaTimer : IDisposable
 		var caps = new TIMECAPS();
 		var mmsys = __TimeGetDevCaps(ref caps, (uint)Marshal.SizeOf(caps));
 
+		if (mmsys != TIMERR_NOERROR)
+		{
+			throw new InvalidOperationException("Failed to get timer capabilities.");
+		}
+
 		_TIMECAPS = caps;
-
-		if (mmsys == TIMERR_NOERROR)
-		{
-			_TIMECAPS = caps;
-		}
-		else
-		{
-			_TIMECAPS = null;
-		}
-
 		__BeginPeriod(_TIMECAPS?.wPeriodMin ?? 1);
 
-		AppDomain.CurrentDomain.ProcessExit += (sender, args) =>
-		{
-			__EndPeriod(_TIMECAPS?.wPeriodMin ?? 1);
-		};
+		AppDomain.CurrentDomain.ProcessExit += (_, _) => __EndPeriod(_TIMECAPS?.wPeriodMin ?? 1);
 
 		_NeedToInitDevice = false;
 	}
